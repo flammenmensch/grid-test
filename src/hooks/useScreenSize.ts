@@ -2,10 +2,11 @@ import { useMemo } from 'react';
 
 export default function useScreenSize() {
   return useMemo(() => {
-    const { width, height } = window.screen;
+    const { devicePixelRatio, screen } = window;
+    const { width, height } = screen;
     return {
-      width,
-      height,
+      width: width * devicePixelRatio,
+      height: height * devicePixelRatio,
     };
   }, []);
 }
