@@ -36,7 +36,7 @@ const Col = styled.div`
 `;
 
 const ColWithSize = (props: any) => {
-  const { ref, width, height } = useElementSize<HTMLDivElement>();
+  const { ref, width, height } = useElementSize();
   return (
     <div {...props} ref={ref}>
       {width} * {height}
