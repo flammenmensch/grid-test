@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 
-export default () => {
+export default function () {
   return useMemo(() => {
     const { width, height } = window.screen;
     return {
@@ -8,4 +8,4 @@ export default () => {
       height,
     };
   }, []);
-};
+}
