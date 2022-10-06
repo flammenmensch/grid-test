@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useState } from 'react';
 import throttle from '../utils/throttle';
 
-export default function () {
+export default function useWindowSize() {
   const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
