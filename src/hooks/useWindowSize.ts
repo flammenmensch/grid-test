@@ -2,17 +2,13 @@ import { useLayoutEffect, useMemo, useState } from 'react';
 import throttle from '../utils/throttle';
 
 export default function useWindowSize() {
-  const [width, setWidth] = useState(
-    window.innerWidth * window.devicePixelRatio,
-  );
-  const [height, setHeight] = useState(
-    window.innerHeight * window.devicePixelRatio,
-  );
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
 
   useLayoutEffect(() => {
     const resize = () => {
-      setWidth(window.innerWidth * window.devicePixelRatio);
-      setHeight(window.innerHeight * window.devicePixelRatio);
+      setWidth(window.innerWidth);
+      setHeight(window.innerHeight);
     };
 
     window.addEventListener('resize', throttle(resize));
