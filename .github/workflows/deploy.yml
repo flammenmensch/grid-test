@@ -45,7 +45,7 @@ jobs:
       - name: Build application
         run: npm run build --if-present
         env:
-          PUBLIC_URL: /grids
+          PUBLIC_URL: /grid-test
       - name: Compress build folder
         run: tar -zcvf build.tar.gz build
       - name: Upload build folder
